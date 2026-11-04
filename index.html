@@ -1,214 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Main Page</title>
-    <style>
-        /* Base Styling & Variables */
-        :root {
-            --primary-color: #4f46e5;
-            --text-dark: #1f2937;
-            --bg-light: #f9fafb;
-            --card-bg: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-        }
-
-        /* Navigation Bar */
-        header {
-            background: var(--card-bg);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 1.2rem 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.8rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Banner Section */
-        .hero {
-            max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #6b7280;
-            max-width: 650px;
-            margin: 0 auto 2rem;
-        }
-
-        .btn-cta {
-            background: var(--primary-color);
-            color: #ffffff;
-            padding: 0.8rem 1.8rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: background 0.3s;
-        }
-
-        .btn-cta:hover {
-            background: #4338ca;
-        }
-
-        /* Portfolio Grid Section */
-        .portfolio-section {
-            max-width: 1100px;
-            margin: 5rem auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.8rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
-            border: 1px solid #e5e7eb;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
-            margin-bottom: 0.8rem;
-            color: var(--primary-color);
-        }
-
-        .card p {
-            color: #4b5563;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact & Footer */
-        footer {
-            background: #111827;
-            color: #ffffff;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 5rem;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            color: #9ca3af;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal Portfolio of Alex Chen - College Student & Aspiring Developer" />
+  <title>Alex Chen | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <a href="#" class="logo">My Portfolio</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#hero" class="nav-logo">Alex<span>Chen</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="btn-primary">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Hero Banner -->
-    <section class="hero" id="about">
-        <h1>Hello, I'm [Your Name]</h1>
-        <p>Welcome to my portfolio! I specialize in web development, digital projects, and e-commerce solutions.</p>
-        <a href="#projects" class="btn-cta">Explore My Work</a>
-    </section>
-
-    <!-- Featured Projects Grid -->
-    <section class="portfolio-section" id="projects">
-        <h2 class="section-title">Featured Work</h2>
-        <div class="portfolio-grid">
-            <div class="card">
-                <h3>Project Title 1</h3>
-                <p>A description of your first project, highlighting the key skills, technologies, or tools used.</p>
-                <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">View Details &rarr;</a>
-            </div>
-            <div class="card">
-                <h3>Project Title 2</h3>
-                <p>A description of your second case study or creative portfolio showcase.</p>
-                <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">View Details &rarr;</a>
-            </div>
-            <div class="card">
-                <h3>E-Commerce Practice</h3>
-                <p>An online store design or business strategy implementation project.</p>
-                <a href="#" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">View Details &rarr;</a>
-            </div>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Hi, my name is</p>
+        <h1 class="hero-title">Alex Chen.</h1>
+        <h2 class="hero-subtitle">Undergraduate Computer Science Student.</h2>
+        <p class="hero-desc">
+          I am a third-year student at State University passionate about front-end design, 
+          software engineering, and open-source software.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub Profile</a>
         </div>
+      </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="contact">
-        <p>&copy; 2026 [Your Name]. All Rights Reserved.</p>
-    </footer>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-desc">
+          Driven by curiosity and problem-solving. When I'm not in lectures or writing code, 
+          I mentor introductory coding workshops and participate in university hackathons.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+          <h3>B.S. in Computer Science</h3>
+          <p class="card-meta">State University | Expected Graduation: May 2026</p>
+          <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, Database Management, Computer Systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-body">
+              <h3>Campus Event Finder</h3>
+              <p>A web app designed to help college organizations list, manage, and promote upcoming student activities on campus.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/yourusername/campus-event-finder" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Demo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-body">
+              <h3>Study Habit Tracker</h3>
+              <p>A productivity dashboard allowing students to log study sessions, set goals, and visualize weekly completion metrics.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>SQLite</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/yourusername/study-tracker" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Demo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container text-center">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-desc">
+          I am actively seeking internship opportunities and collaborations. Feel free to reach out!
+        </p>
+        <a href="mailto:alex.chen@example.edu" class="btn-primary">Say Hello</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Alex Chen. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
