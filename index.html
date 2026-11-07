@@ -1,62 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Name | Portfolio</title>
-  
-  <!-- Google Font: Syne -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Syne:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thiện Nhân - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header / Navigation -->
-  <header class="navbar">
-    <div class="username-badge">aNNh</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="container">
-        <h1 class="heading-box accent-box">Hi, I'm Nguyễn Thiện Nhân</h1>
-        <p class="subtitle">Every small step you take today brings you closer to the life you dream of tomorrow. Stay patient, stay consistent, and trust the journey!</p>
-      </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="heading-box">About Me</h2>
-        <div class="content-box">
-          <p>I am currently a sophomore at college.</p>
-          
-          <ul class="personal-info">
-            <li><strong>Major:</strong> Digital Business</li>
-            <li><strong>Location:</strong> Ho Chi Minh City University Of Technology</li>
-            <li><strong>Email:</strong> nhan.nguyen07122007@hcmut.edu.vn</li>
-          </ul>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="nav-logo-circle">N</div>
+            <span class="username">aNNh</span>
         </div>
-      </div>
-    </section>
-  </main>
+        <nav class="nav-menu">
+            <a href="#introduction">Home</a>
+            <a href="#about">About</a>
+            <a href="#academic">Academic</a>
+            <a href="#archives">Archives</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <div class="copyright">
-      &copy; 2026 Nguyễn Thiện Nhân. All rights reserved. Still updating...
+    <!-- Decorative Textures -->
+    <div class="texture-container">
+        <div class="sparkle s1">✦</div>
+        <div class="sparkle s2">✦</div>
+        <div class="sparkle s3">★</div>
+        <div class="curve-line"></div>
+        <div class="straight-line"></div>
     </div>
-  </footer>
 
+    <main class="container">
+        <!-- Introduction -->
+        <section id="introduction" class="fade-in">
+            <h1>Welcome to my space!</h1>
+            <blockquote class="quote">
+                “Every small step you take today brings you closer to the life you dream of tomorrow. Stay patient, stay consistent, and trust the journey.”
+            </blockquote>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <p>Hello! My name is <strong>Nguyễn Thiện Nhân</strong>.</p>
+                    <p>Currently, I am a sophomore at Ho Chi Minh City University of Technology.</p>
+                    <p>I am interested and curious about everything, but currently, it is about business, human behavior, information system and artificial intelligence (AI).</p>
+                </div>
+                <!-- IMAGE PLACEHOLDER: Me.JPG -->
+                <div class="image-frame">
+                    <img src="Me.JPG" alt="Nguyễn Thiện Nhân" class="portfolio-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic -->
+        <section id="academic" class="fade-in">
+            <h2>Academic</h2>
+            <div class="content-grid reverse">
+                <div class="text-content">
+                    <h3>VNU – Ho Chi Minh City University Of Technology</h3>
+                    <p>School of Industrial Management</p>
+                    <p>Major: Digital Business</p>
+                </div>
+                <div class="logo-grid">
+                    <!-- IMAGE PLACEHOLDER: Logo HCMUT.png -->
+                    <div class="image-frame logo-frame">
+                        <img src="Logo HCMUT.png" alt="HCMUT Logo" class="portfolio-img">
+                    </div>
+                    <!-- IMAGE PLACEHOLDER: Logo SIM.jpg -->
+                    <div class="image-frame logo-frame">
+                        <img src="Logo SIM.jpg" alt="SIM Logo" class="portfolio-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Archives -->
+        <section id="archives" class="fade-in">
+            <h2>Archives</h2>
+            <ul class="archive-list">
+                <li>IELTS: 6.5</li>
+                <li>MOS Certificate: Word, Excel, PowerPoint</li>
+                <li>VYSC2026</li>
+            </ul>
+            
+            <div class="archive-gallery">
+                <!-- IELTS -->
+                <div class="image-frame">
+                    <img src="IELTS CERTIFICATE-1.png" alt="IELTS Certificate" class="portfolio-img">
+                </div>
+                
+                <!-- MOS Certificates Row -->
+                <div class="mos-row">
+                    <!-- IMAGE PLACEHOLDER: Office Word 2016-1.png -->
+                    <div class="image-frame">
+                        <img src="Office Word 2016-1.png" alt="MOS Word" class="portfolio-img">
+                    </div>
+                    <!-- IMAGE PLACEHOLDER: Office Excel 2016-1.png -->
+                    <div class="image-frame">
+                        <img src="Office Excel 2016-1.png" alt="MOS Excel" class="portfolio-img">
+                    </div>
+                    <!-- IMAGE PLACEHOLDER: Office PowerPoint 2016-1.png -->
+                    <div class="image-frame">
+                        <img src="Office PowerPoint 2016-1.png" alt="MOS PowerPoint" class="portfolio-img">
+                    </div>
+                </div>
+
+                <!-- VYSC Certificate -->
+                <div class="image-frame">
+                    <img src="VYSC2026 Certificate.png" alt="VYSC 2026 Certificate" class="portfolio-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="fade-in">
+            <h2>Contact</h2>
+            <div class="contact-card">
+                <p><strong>School Mail:</strong> <a href="mailto:nhan.nguyen07122007@hcmut.edu.vn">nhan.nguyen07122007@hcmut.edu.vn</a></p>
+                <p><strong>Personal Mail:</strong> <a href="mailto:thiennhannguyen0712@gmail.com">thiennhannguyen0712@gmail.com</a></p>
+                <p class="reach-out">If you want to talk, feel free to reach out!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Copyright -->
+    <footer class="footer">
+        <p>&copy; 2026 Nguyễn Thiện Nhân (aNNh). All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
